@@ -1,0 +1,16 @@
+{
+	"compatibility_date": "2025-10-08",
+	"main": "src/index.ts",
+	"name": "vietjack-clone",
+	"upload_source_maps": true,
+	"observability": {
+		"enabled": true
+	},
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "vietjack-db",
+			"database_id": "3ae3868f-1517-4f99-a19d-7ac78b262aad"
+		}
+	]
+}
