@@ -6,6 +6,7 @@ import { ContentfulStatusCode } from 'hono/utils/http-status';
 const app = new Hono<{ Bindings: Env }>();
 
 app.onError((err, c) => {
+  console.error('Error detail:', err);
   if (err instanceof ApiException) {
     // If it's a Chanfana ApiException, let Chanfana handle the response
     return c.json(

@@ -1,5 +1,6 @@
-import { D1CreateEndpoint, D1DeleteEndpoint, D1ListEndpoint, D1ReadEndpoint, D1UpdateEndpoint } from 'chanfana';
+import { ApiException, D1CreateEndpoint, D1DeleteEndpoint, D1ListEndpoint, D1ReadEndpoint, D1UpdateEndpoint } from 'chanfana';
 import { AppContext, HandleArgs } from '../../../types';
+import { checkDuplicate } from '../../../utils/db';
 import { ClassModel } from './classModel';
 
 export class ClassList extends D1ListEndpoint<HandleArgs> {
@@ -26,6 +27,40 @@ export class ClassCreate extends D1CreateEndpoint<HandleArgs> {
       publisherId: true
     })
   };
+
+  async handle(c: AppContext) {
+    const data = await this.getValidatedData<any>();
+    const body = data.body;
+    const db = c.env.DB;
+
+    if (body.unsignedName) {
+      const existing = await checkDuplicate(
+        db,
+        ClassModel.tableName,
+        body.unsignedName,
+        {
+          column: 'publisherId',
+          value: body.publisherId
+        }
+      );
+      if (existing) {
+        const error = new ApiException('Class already exists');
+        error.status = 409;
+        throw error;
+      }
+    }
+
+    const cleanBody = Object.fromEntries(Object.entries(body).filter(([_, v]) => v !== undefined));
+    const result = await this.create(cleanBody);
+ 
+    return c.json(
+      {
+        success: true,
+        result: ClassModel.serializer(result)
+      },
+      201
+    );
+  }
 }
 
 export class ClassRead extends D1ReadEndpoint<HandleArgs> {
@@ -50,6 +85,58 @@ export class ClassUpdate extends D1UpdateEndpoint<HandleArgs> {
       publisherId: true
     })
   };
+
+  async handle(c: AppContext) {
+    const data = await this.getValidatedData<any>();
+    const { params, body } = data;
+    const db = c.env.DB;
+
+    if (body.unsignedName || body.publisherId) {
+      let publisherId = body.publisherId;
+      let unsignedName = body.unsignedName;
+
+      // If either is missing, fetch current values
+      if (publisherId === undefined || unsignedName === undefined) {
+        const current = await db
+          .prepare(`SELECT unsignedName, publisherId FROM ${ClassModel.tableName} WHERE id = ?`)
+          .bind(params.id)
+          .first<any>();
+
+        if (publisherId === undefined) publisherId = current?.publisherId;
+        if (unsignedName === undefined) unsignedName = current?.unsignedName;
+      }
+
+      const existing = await checkDuplicate(db, ClassModel.tableName, unsignedName, {
+        column: 'publisherId',
+        value: publisherId
+      });
+
+      if (existing && existing.id !== params.id) {
+        const error = new ApiException('Class already exists');
+        error.status = 409;
+        throw error;
+      }
+    }
+
+    // Manual Update
+    const keys = Object.keys(body);
+    if (keys.length > 0) {
+      const setClause = keys.map(k => `${k} = ?`).join(', ');
+      const values = keys.map(k => (typeof body[k] === 'boolean' ? (body[k] ? 1 : 0) : body[k]));
+      await db.prepare(`UPDATE ${ClassModel.tableName} SET ${setClause} WHERE id = ?`)
+        .bind(...values, params.id)
+        .run();
+    }
+
+    const updated = await db.prepare(`SELECT * FROM ${ClassModel.tableName} WHERE id = ?`)
+      .bind(params.id)
+      .first();
+
+    return {
+      success: true,
+      result: ClassModel.serializer(updated)
+    };
+  }
 }
 
 export class ClassDelete extends D1DeleteEndpoint<HandleArgs> {
