@@ -63,6 +63,26 @@ describe("Crawler and Seeding Integration Tests", () => {
 		}
 		expect(res.status).toBe(200);
 		expect(body.success).toBe(true);
+	});
 
+	test("POST /content/tusach-crawler - should crawl questions from tusach.vn", async () => {
+		const res = await SELF.fetch("http://local.test/content/tusach-crawler", {
+			method: "POST",
+			body: JSON.stringify({
+				urls: ["https://tusach.vn/tai-lieu-hoc-tap/de-thi-cuoi-hoc-ki-2-tieng-viet-5-ctst-de-so-1"], 
+				bookId: 54,
+			}),
+			headers: {
+				"Content-Type": "application/json",
+			},
+		});
+
+		const body = await res.json() as any;
+		if (res.status !== 200) {
+			console.error("Tusach crawler failed:", body);
+		}
+		expect(res.status).toBe(200);
+		expect(body.success).toBe(true);
+		expect(body.results[0].questionsCount).toBeGreaterThanOrEqual(0);
 	});
 });
