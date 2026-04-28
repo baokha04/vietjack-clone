@@ -6,6 +6,7 @@ export const questionSchema = z.object({
   unsignedName: z.string().max(512).optional(),
   description: z.string().optional(),
   deleted: z.boolean().default(false),
+  question: z.string().optional(),
   answer: z.string().optional(),
   bookId: z.number().int().optional()
 });

@@ -63,27 +63,32 @@ export class CrawlerEndpoint extends OpenAPIRoute {
         const html = await response.text();
         const { document } = parseHTML(html);
 
-        const questions = document.querySelectorAll(
-          '#questionPreviewList > .js-qitem .quiz-answer-left'
-        );
-        const answers = document.querySelectorAll(
-          '#questionPreviewList > .js-qitem .quiz-answer-right'
+        const items = document.querySelectorAll(
+          '#questionPreviewList > .js-qitem'
         );
 
         let count = 0;
-        for (let i = 0; i < questions.length; i++) {
-          const qText = questions[i].textContent?.trim();
-          const aText = answers[i]?.textContent?.trim();
+        for (const item of items) {
+          const nameEl = item.querySelector('.quiz-answer-left strong');
+          const questionEl = item.querySelector(
+            '.quiz-answer-left h4.title-question'
+          );
+          const answerEl = item.querySelector('.quiz-answer-right .question');
 
-          if (qText) {
+          const nameText = nameEl?.textContent?.trim() || '';
+          const questionText = questionEl?.textContent?.trim() || '';
+          const answerText = answerEl?.textContent?.trim() || '';
+
+          if (nameText || questionText) {
             await db
               .prepare(
-                'INSERT INTO question (name, unsignedName, answer, bookId) VALUES (?, ?, ?, ?)'
+                'INSERT INTO question (name, unsignedName, question, answer, bookId) VALUES (?, ?, ?, ?, ?)'
               )
               .bind(
-                qText,
-                toNonAccentVietnamese(qText),
-                aText || '',
+                nameText,
+                toNonAccentVietnamese(nameText),
+                questionText,
+                answerText,
                 body.bookId
               )
               .run();
