@@ -1,20 +1,18 @@
 import { z } from 'zod';
 
-export const questionSchema = z.object({
+export const classSchema = z.object({
   id: z.number().int(),
   name: z.string().max(512),
   unsignedName: z.string().max(512).optional(),
   description: z.string().optional(),
   deleted: z.boolean().default(false),
-  answer: z.string().optional(),
-  bookId: z.number().int().optional()
+  publisherId: z.number().int().optional()
 });
 
-export const QuestionModel = {
-  tableName: 'question',
+export const ClassModel = {
+  tableName: 'class',
   primaryKeys: ['id'],
-  schema: questionSchema,
+  schema: classSchema,
   serializer: (obj: any) => ({ ...obj, deleted: Boolean(obj.deleted) }),
-  serializerObject: questionSchema
+  serializerObject: classSchema
 };
-

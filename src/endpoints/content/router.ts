@@ -1,10 +1,20 @@
 import { Hono } from 'hono';
 import { fromHono } from 'chanfana';
-import { SeedCategories } from './seed';
-import { CrawlerEndpoint } from './crawler';
+import { crawlerRouter } from './crawler';
+import { publisherRouter } from './publisher';
+import { classRouter } from './class';
+import { subjectRouter } from './subject';
+import { bookRouter } from './book';
 
 export const contentRouter = fromHono(new Hono());
-
-contentRouter.post('/seed', SeedCategories);
-contentRouter.post('/crawler', CrawlerEndpoint);
+// Crawler
+crawlerRouter(contentRouter);
+// Publisher
+publisherRouter(contentRouter);
+// Class
+classRouter(contentRouter);
+// Subject
+subjectRouter(contentRouter);
+// Book
+bookRouter(contentRouter);
 

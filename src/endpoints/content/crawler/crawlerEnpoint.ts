@@ -1,7 +1,7 @@
 import { OpenAPIRoute } from 'chanfana';
 import { z } from 'zod';
-import { AppContext } from '../../types';
-import { toNonAccentVietnamese } from '../../utils/string';
+import { AppContext } from '../../../types';
+import { toNonAccentVietnamese } from '../../../utils/string';
 import { parseHTML } from 'linkedom';
 
 const crawlerSchema = z.object({

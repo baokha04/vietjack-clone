@@ -1,0 +1,619 @@
+{
+  "publisher": {
+    "name": "Chân trời sáng tạo",
+    "class": [
+      {
+        "name": "Lớp 1",
+        "subject": [
+          {
+            "name": "Tiếng Việt",
+            "book": [
+              {
+                "name": "Sách giáo khoa tập 1"
+              },
+              {
+                "name": "Sách giáo khoa tập 2"
+              },
+              {
+                "name": "Sách bài tập tập 1"
+              },
+              {
+                "name": "Sách bài tập tập 2"
+              },
+              {
+                "name": "Đề cương ôn tập cuối kì 1"
+              },
+              {
+                "name": "Đề cương ôn tập cuối kì 2"
+              }
+            ]
+          },
+          {
+            "name": "Toán",
+            "book": [
+              {
+                "name": "Sách giáo khoa tập 1"
+              },
+              {
+                "name": "Sách giáo khoa tập 2"
+              },
+              {
+                "name": "Sách bài tập tập 1"
+              },
+              {
+                "name": "Sách bài tập tập 2"
+              },
+              {
+                "name": "Đề cương ôn tập cuối kì 1"
+              },
+              {
+                "name": "Đề cương ôn tập cuối kì 2"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Lớp 2",
+        "subject": [
+          {
+            "name": "Tiếng Việt",
+            "book": [
+              {
+                "name": "Sách giáo khoa tập 1"
+              },
+              {
+                "name": "Sách giáo khoa tập 2"
+              },
+              {
+                "name": "Sách bài tập tập 1"
+              },
+              {
+                "name": "Sách bài tập tập 2"
+              },
+              {
+                "name": "Đề cương ôn tập cuối kì 1"
+              },
+              {
+                "name": "Đề cương ôn tập cuối kì 2"
+              }
+            ]
+          },
+          {
+            "name": "Toán",
+            "book": [
+              {
+                "name": "Sách giáo khoa tập 1"
+              },
+              {
+                "name": "Sách giáo khoa tập 2"
+              },
+              {
+                "name": "Sách bài tập tập 1"
+              },
+              {
+                "name": "Sách bài tập tập 2"
+              },
+              {
+                "name": "Đề cương ôn tập cuối kì 1"
+              },
+              {
+                "name": "Đề cương ôn tập cuối kì 2"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Lớp 3",
+        "subject": [
+          {
+            "name": "Tiếng Việt",
+            "book": [
+              {
+                "name": "Sách giáo khoa tập 1"
+              },
+              {
+                "name": "Sách giáo khoa tập 2"
+              },
+              {
+                "name": "Sách bài tập tập 1"
+              },
+              {
+                "name": "Sách bài tập tập 2"
+              },
+              {
+                "name": "Đề cương ôn tập cuối kì 1"
+              },
+              {
+                "name": "Đề cương ôn tập cuối kì 2"
+              }
+            ]
+          },
+          {
+            "name": "Toán",
+            "book": [
+              {
+                "name": "Sách giáo khoa tập 1"
+              },
+              {
+                "name": "Sách giáo khoa tập 2"
+              },
+              {
+                "name": "Sách bài tập tập 1"
+              },
+              {
+                "name": "Sách bài tập tập 2"
+              },
+              {
+                "name": "Đề cương ôn tập cuối kì 1"
+              },
+              {
+                "name": "Đề cương ôn tập cuối kì 2"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Lớp 4",
+        "subject": [
+          {
+            "name": "Tiếng Việt",
+            "book": [
+              {
+                "name": "Sách giáo khoa tập 1"
+              },
+              {
+                "name": "Sách giáo khoa tập 2"
+              },
+              {
+                "name": "Sách bài tập tập 1"
+              },
+              {
+                "name": "Sách bài tập tập 2"
+              },
+              {
+                "name": "Đề cương ôn tập cuối kì 1"
+              },
+              {
+                "name": "Đề cương ôn tập cuối kì 2"
+              }
+            ]
+          },
+          {
+            "name": "Toán",
+            "book": [
+              {
+                "name": "Sách giáo khoa tập 1"
+              },
+              {
+                "name": "Sách giáo khoa tập 2"
+              },
+              {
+                "name": "Sách bài tập tập 1"
+              },
+              {
+                "name": "Sách bài tập tập 2"
+              },
+              {
+                "name": "Đề cương ôn tập cuối kì 1"
+              },
+              {
+                "name": "Đề cương ôn tập cuối kì 2"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Lớp 5",
+        "subject": [
+          {
+            "name": "Tiếng Việt",
+            "book": [
+              {
+                "name": "Sách giáo khoa tập 1"
+              },
+              {
+                "name": "Sách giáo khoa tập 2"
+              },
+              {
+                "name": "Sách bài tập tập 1"
+              },
+              {
+                "name": "Sách bài tập tập 2"
+              },
+              {
+                "name": "Đề cương ôn tập cuối kì 1"
+              },
+              {
+                "name": "Đề cương ôn tập cuối kì 2"
+              }
+            ]
+          },
+          {
+            "name": "Toán",
+            "book": [
+              {
+                "name": "Sách giáo khoa tập 1"
+              },
+              {
+                "name": "Sách giáo khoa tập 2"
+              },
+              {
+                "name": "Sách bài tập tập 1"
+              },
+              {
+                "name": "Sách bài tập tập 2"
+              },
+              {
+                "name": "Đề cương ôn tập cuối kì 1"
+              },
+              {
+                "name": "Đề cương ôn tập cuối kì 2"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Lớp 6",
+        "subject": [
+          {
+            "name": "Tiếng Việt",
+            "book": [
+              {
+                "name": "Sách giáo khoa tập 1"
+              },
+              {
+                "name": "Sách giáo khoa tập 2"
+              },
+              {
+                "name": "Sách bài tập tập 1"
+              },
+              {
+                "name": "Sách bài tập tập 2"
+              },
+              {
+                "name": "Đề cương ôn tập cuối kì 1"
+              },
+              {
+                "name": "Đề cương ôn tập cuối kì 2"
+              }
+            ]
+          },
+          {
+            "name": "Toán",
+            "book": [
+              {
+                "name": "Sách giáo khoa tập 1"
+              },
+              {
+                "name": "Sách giáo khoa tập 2"
+              },
+              {
+                "name": "Sách bài tập tập 1"
+              },
+              {
+                "name": "Sách bài tập tập 2"
+              },
+              {
+                "name": "Đề cương ôn tập cuối kì 1"
+              },
+              {
+                "name": "Đề cương ôn tập cuối kì 2"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Lớp 7",
+        "subject": [
+          {
+            "name": "Tiếng Việt",
+            "book": [
+              {
+                "name": "Sách giáo khoa tập 1"
+              },
+              {
+                "name": "Sách giáo khoa tập 2"
+              },
+              {
+                "name": "Sách bài tập tập 1"
+              },
+              {
+                "name": "Sách bài tập tập 2"
+              },
+              {
+                "name": "Đề cương ôn tập cuối kì 1"
+              },
+              {
+                "name": "Đề cương ôn tập cuối kì 2"
+              }
+            ]
+          },
+          {
+            "name": "Toán",
+            "book": [
+              {
+                "name": "Sách giáo khoa tập 1"
+              },
+              {
+                "name": "Sách giáo khoa tập 2"
+              },
+              {
+                "name": "Sách bài tập tập 1"
+              },
+              {
+                "name": "Sách bài tập tập 2"
+              },
+              {
+                "name": "Đề cương ôn tập cuối kì 1"
+              },
+              {
+                "name": "Đề cương ôn tập cuối kì 2"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Lớp 8",
+        "subject": [
+          {
+            "name": "Tiếng Việt",
+            "book": [
+              {
+                "name": "Sách giáo khoa tập 1"
+              },
+              {
+                "name": "Sách giáo khoa tập 2"
+              },
+              {
+                "name": "Sách bài tập tập 1"
+              },
+              {
+                "name": "Sách bài tập tập 2"
+              },
+              {
+                "name": "Đề cương ôn tập cuối kì 1"
+              },
+              {
+                "name": "Đề cương ôn tập cuối kì 2"
+              }
+            ]
+          },
+          {
+            "name": "Toán",
+            "book": [
+              {
+                "name": "Sách giáo khoa tập 1"
+              },
+              {
+                "name": "Sách giáo khoa tập 2"
+              },
+              {
+                "name": "Sách bài tập tập 1"
+              },
+              {
+                "name": "Sách bài tập tập 2"
+              },
+              {
+                "name": "Đề cương ôn tập cuối kì 1"
+              },
+              {
+                "name": "Đề cương ôn tập cuối kì 2"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Lớp 9",
+        "subject": [
+          {
+            "name": "Tiếng Việt",
+            "book": [
+              {
+                "name": "Sách giáo khoa tập 1"
+              },
+              {
+                "name": "Sách giáo khoa tập 2"
+              },
+              {
+                "name": "Sách bài tập tập 1"
+              },
+              {
+                "name": "Sách bài tập tập 2"
+              },
+              {
+                "name": "Đề cương ôn tập cuối kì 1"
+              },
+              {
+                "name": "Đề cương ôn tập cuối kì 2"
+              }
+            ]
+          },
+          {
+            "name": "Toán",
+            "book": [
+              {
+                "name": "Sách giáo khoa tập 1"
+              },
+              {
+                "name": "Sách giáo khoa tập 2"
+              },
+              {
+                "name": "Sách bài tập tập 1"
+              },
+              {
+                "name": "Sách bài tập tập 2"
+              },
+              {
+                "name": "Đề cương ôn tập cuối kì 1"
+              },
+              {
+                "name": "Đề cương ôn tập cuối kì 2"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Lớp 10",
+        "subject": [
+          {
+            "name": "Tiếng Việt",
+            "book": [
+              {
+                "name": "Sách giáo khoa tập 1"
+              },
+              {
+                "name": "Sách giáo khoa tập 2"
+              },
+              {
+                "name": "Sách bài tập tập 1"
+              },
+              {
+                "name": "Sách bài tập tập 2"
+              },
+              {
+                "name": "Đề cương ôn tập cuối kì 1"
+              },
+              {
+                "name": "Đề cương ôn tập cuối kì 2"
+              }
+            ]
+          },
+          {
+            "name": "Toán",
+            "book": [
+              {
+                "name": "Sách giáo khoa tập 1"
+              },
+              {
+                "name": "Sách giáo khoa tập 2"
+              },
+              {
+                "name": "Sách bài tập tập 1"
+              },
+              {
+                "name": "Sách bài tập tập 2"
+              },
+              {
+                "name": "Đề cương ôn tập cuối kì 1"
+              },
+              {
+                "name": "Đề cương ôn tập cuối kì 2"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Lớp 11",
+        "subject": [
+          {
+            "name": "Tiếng Việt",
+            "book": [
+              {
+                "name": "Sách giáo khoa tập 1"
+              },
+              {
+                "name": "Sách giáo khoa tập 2"
+              },
+              {
+                "name": "Sách bài tập tập 1"
+              },
+              {
+                "name": "Sách bài tập tập 2"
+              },
+              {
+                "name": "Đề cương ôn tập cuối kì 1"
+              },
+              {
+                "name": "Đề cương ôn tập cuối kì 2"
+              }
+            ]
+          },
+          {
+            "name": "Toán",
+            "book": [
+              {
+                "name": "Sách giáo khoa tập 1"
+              },
+              {
+                "name": "Sách giáo khoa tập 2"
+              },
+              {
+                "name": "Sách bài tập tập 1"
+              },
+              {
+                "name": "Sách bài tập tập 2"
+              },
+              {
+                "name": "Đề cương ôn tập cuối kì 1"
+              },
+              {
+                "name": "Đề cương ôn tập cuối kì 2"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Lớp 12",
+        "subject": [
+          {
+            "name": "Tiếng Việt",
+            "book": [
+              {
+                "name": "Sách giáo khoa tập 1"
+              },
+              {
+                "name": "Sách giáo khoa tập 2"
+              },
+              {
+                "name": "Sách bài tập tập 1"
+              },
+              {
+                "name": "Sách bài tập tập 2"
+              },
+              {
+                "name": "Đề cương ôn tập cuối kì 1"
+              },
+              {
+                "name": "Đề cương ôn tập cuối kì 2"
+              }
+            ]
+          },
+          {
+            "name": "Toán",
+            "book": [
+              {
+                "name": "Sách giáo khoa tập 1"
+              },
+              {
+                "name": "Sách giáo khoa tập 2"
+              },
+              {
+                "name": "Sách bài tập tập 1"
+              },
+              {
+                "name": "Sách bài tập tập 2"
+              },
+              {
+                "name": "Đề cương ôn tập cuối kì 1"
+              },
+              {
+                "name": "Đề cương ôn tập cuối kì 2"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
